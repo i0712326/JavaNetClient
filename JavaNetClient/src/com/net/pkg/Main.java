@@ -1,18 +1,12 @@
 package com.net.pkg;
 
+import com.net.pkg.core05.SwitchingCore05;
+
 public class Main {
-	//private static final int port = 1123;
 	public static void main(String[] args) throws InterruptedException {
 		System.out.println("Start Main Thread");
-		/*ReceiverThread01 receiver = new ReceiverThread01(port);
-		
-		Thread t1 = new Thread(receiver,"Server Receiver Thread");
-		t1.start();
-		
-		t1.join();*/
-		SwitchingCore app = new SwitchingCore();
+		SwitchingCore05 app = new SwitchingCore05();
 		app.start();
 		System.out.println("Main Thread End.");
 	}
-
 }

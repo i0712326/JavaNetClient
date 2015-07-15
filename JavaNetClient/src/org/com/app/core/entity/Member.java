@@ -3,6 +3,7 @@ package org.com.app.core.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -30,7 +31,7 @@ public class Member implements Serializable {
 	private String port;
 	@Column(name="HOST")
 	private String host;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy= "member")
+	@OneToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY, mappedBy= "member")
 	private List<Bin> bins;
 	public String getIin() {
 		return iin;

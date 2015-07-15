@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
@@ -16,11 +17,12 @@ public class Bin implements Serializable {
 	@GeneratedValue
 	@Column(name="BIN", unique=true)
 	private String bin;
-	@Column(name="TYPE", nullable=false)
+	@Column(name="CARDTYPE_TYPE", nullable=false)
 	private String type;
-	@Column(name="LENGTH")
+	@Column(name="BINLEN")
 	private int len;
 	@ManyToOne
+	@JoinColumn(name="MEMDATA_IIN")
 	private Member member;
 	public String getBin() {
 		return bin;

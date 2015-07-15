@@ -1,4 +1,6 @@
 /application.properties
 /applicationContext.xml
+/com/
 /datasource.xml
 /log4j.xml
+/org/
